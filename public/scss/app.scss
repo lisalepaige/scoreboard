@@ -3,14 +3,29 @@
 @import 'components/numbers';
 @import 'components/minplusbuttons';
 @import 'components/submitbuttons';
+@import 'components/headings';
+
 
 body
 {
-    background-color: lightcoral;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 40px;
+    display: grid;
+    grid-template-rows: 30% 30% 30%;
+    justify-items: center;
+    grid-gap: 10px;
 }
 
-.teams
+.team, .info__shots, .info__fouls, .updates__p
 {
-    background-color: red;
-    grid-column-start: span 1;
+    display: flex;
+    flex-direction: row;
+}
+
+.space
+{
+    display: block;
+    background-color: lightgrey;
+    height: 1px;
+    width: 90%;
 }

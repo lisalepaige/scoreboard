@@ -22,9 +22,42 @@
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px; }
 
-body {
-  background-color: lightcoral; }
+h2 {
+  text-transform: uppercase;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center; }
 
-.teams {
-  background-color: red;
-  grid-column-start: span 1; }
+h1 {
+  margin-top: 15px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 2em;
+  font-weight: bold; }
+
+p {
+  text-align: center; }
+
+.info--team1 {
+  color: lightcoral; }
+
+.info--team2 {
+  color: lightgreen; }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 40px;
+  display: grid;
+  grid-template-rows: 30% 30% 30%;
+  justify-items: center;
+  grid-gap: 10px; }
+
+.team, .info__shots, .info__fouls, .updates__p {
+  display: flex;
+  flex-direction: row; }
+
+.space {
+  display: block;
+  background-color: lightgrey;
+  height: 1px;
+  width: 90%; }
