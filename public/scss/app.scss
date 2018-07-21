@@ -1,0 +1,16 @@
+@import 'variables';
+
+@import 'components/numbers';
+@import 'components/minplusbuttons';
+@import 'components/submitbuttons';
+
+body
+{
+    background-color: lightcoral;
+}
+
+.teams
+{
+    background-color: red;
+    grid-column-start: span 1;
+}
