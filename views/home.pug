@@ -2,24 +2,26 @@ html(lang='en')
   head
     meta(charset='utf-8')
     title Scoreboard
-    link(rel='stylesheet', href='../public/css/app.css')
+    link(rel='stylesheet', type='text/css', href='public/css/app.css')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
   body
     section.team
       h2 Belgium
-      h3 2
-      p -
-      h3 0
+      h1 2
+      h1 -
+      h1 0
       h2 Brazil
+    .space  
     section.info
-      div
-        p 10
+      .info__shots
+        h2.info--team1 10
         h2 total shots
-        p 4
-      div
-        p 2
-        h2 fouls
-        p 3
+        h2.info--team2 4
+      .info__fouls
+        h2.info--team1 2
+        h2.fouls__h2 fouls
+        h2.info--team2 3
+    .space  
     section.updates
-      p 33' - Goal by Dries Mertens
-      p 50' - Foul by Denis Glushakov
+      p.updates__p 33' - Goal by Dries Mertens
+      p.updates__p 50' - Foul by Denis Glushakov
