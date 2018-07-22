@@ -17,6 +17,13 @@
   },
   "homepage": "https://github.com/lisalepaige/scoreboard#readme",
   "dependencies": {
-    "express": "^4.16.3"
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "mongoose": "^5.2.4",
+    "path": "^0.12.7",
+    "pug": "^2.0.3"
+  },
+  "devDependencies": {
+    "gulp-nodemon": "^2.2.1"
   }
 }
