@@ -1,49 +1,56 @@
 head
   meta(charset='utf-8')
   title Scoreboard
-  link(rel='stylesheet', href='../public/css/app.css')
+  link(rel='stylesheet', type='text/css', href='public/css/app.css')
   meta(name='viewport', content='width=device-width, initial-scale=1.0')
-
-h1 control panel
-
+h1 Control Panel
 h3 Teams
-label(for='country1') Country 1
-input(type='text', name='country1')
-a(href='#') submit
-label(for='country2') Country 2
-input(type='text', name='country2')
-a(href='#') submit
-
+.teams__flexbox
+  label.teams__label(for='country1') Team 1
+  input.teams__input(type='text', name='country1')
+  a.sbmtbutton(href='#') submit
+.teams__flexbox
+  label.teams__label(for='country2') Team 2
+  input.teams__input(type='text', name='country2')
+  a.sbmtbutton(href='#') submit
+.space  
 h3 Score
 .controls
-  a.min(href='#') -
-  p.qty 0
-  a.plus(href='#') +
+  h4.controls__team Team 1
+  a.controls__min(href='#') -
+  p.controls__aantal 0
+  a.controls__plus(href='#') +
 .controls
-  a.min(href='#') -
-  p.qty 0
-  a.plus(href='#') +
-
+  h4.controls__team Team 2
+  a.controls__min(href='#') -
+  p.controls__aantal 0
+  a.controls__plus(href='#') +
+.space  
 h3 Total shots
 .controls
-  a.min(href='#') -
-  p.qty 0
-  a.plus(href='#') +
+  h4.controls__team Team 1
+  a.controls__min(href='#') -
+  p.controls__aantal 0
+  a.controls__plus(href='#') +
 .controls
-  a.min(href='#') -
-  p.qty 0
-  a.plus(href='#') +
-
+  h4.controls__team Team 2
+  a.controls__min(href='#') -
+  p.controls__aantal 0
+  a.controls__plus(href='#') +
+.space  
 h3 Fouls
 .controls
-  a.min(href='#') -
-  p.qty 0
-  a.plus(href='#') +
+  h4.controls__team Team 1
+  a.controls__min(href='#') -
+  p.controls__aantal 0
+  a.controls__plus(href='#') +
 .controls
-  a.min(href='#') -
-  p.qty 0
-  a.plus(href='#') +
-  
+  h4.controls__team Team 2
+  a.controls__min(href='#') -
+  p.controls__aantal 0
+  a.controls__plus(href='#') +
+.space  
 h3 Live Updates
-input(type='text', name='updates')
-a(href='#') submit
+.updates__flexbox
+  input.updates__input(type='text', name='updates')
+  a.sbmtbutton(href='#') submit
