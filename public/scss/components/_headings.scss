@@ -13,6 +13,13 @@ h1
     padding-right: 5px;
     font-size: 2em;
     font-weight: bold;
+    font-family: $font-second;
+}
+
+h3
+{
+    text-transform: uppercase;
+    font-family: $font-second;
 }
 
 p
@@ -23,9 +30,11 @@ p
 .info--team1
 {
     color: lightcoral;
+    font-family: $font-second;
 }
 
 .info--team2
 {
     color: lightgreen;
+    font-family: $font-second;
 }

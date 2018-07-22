@@ -1,0 +1,32 @@
+.sbmtbutton
+{
+    text-decoration: none;
+    color: white;
+    background-color: $sbmtbuttonblue;
+    border-radius: 10px;
+    padding: 6px;
+    font-family: $font-second;
+}
+
+.controls{
+    display: flex;
+    justify-content: space-around;
+    height: 48px;
+}
+
+.controls__min, .controls__plus
+{
+    display: inline-block;
+    padding: 2px 10px;
+    border: 1px solid $controlbuttonblue;
+    color: $controlbuttonblue;
+    text-decoration: none;
+    margin: 5px;
+    margin-top: 15px;
+    padding-bottom: 5px;
+}
+
+.controls__team
+{
+    margin-right: 10px;
+}
