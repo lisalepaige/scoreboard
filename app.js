@@ -11,6 +11,7 @@ app.use("/", require('./routes/index'));
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
+app.use(express.static(path.join(__dirname, './public/css')));
 
 /*var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
