@@ -7,6 +7,12 @@ router.get('/', function (req, res) {
     });
 });
 
+router.get('/home', function (req, res) {
+    res.render('./home', {
+        title: 'Home'
+    });
+});
+
 router.get('/controle', function (req, res) {  
     res.render('./controle', {
         title: 'Controle Panel'
