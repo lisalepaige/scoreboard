@@ -23,7 +23,8 @@
     "mongoose": "^5.2.4",
     "path": "^0.12.7",
     "primus": "^7.2.2",
-    "pug": "^2.0.3"
+    "pug": "^2.0.3",
+    "ws": "^6.0.0"
   },
   "devDependencies": {
     "gulp-nodemon": "^2.2.1"

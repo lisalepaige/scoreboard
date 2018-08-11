@@ -5,12 +5,14 @@ exports.go = function(server) {
 
     //primus.save(__dirname+'/primuslib.js');
 
-    primus.on("connection", function(primusspark) { 
+    primus.on("connection", function connection(primusspark) { 
         console.log("spark primus connected");
 
+        primus.write('here is some data');
+
         primusspark.on("data", function(data) {
-            primus.write(data);
+            console.log("data from primusspark")
         });
-    } );
+    });
 }
 

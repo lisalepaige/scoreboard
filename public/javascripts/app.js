@@ -1,5 +1,4 @@
-var aantal = document.querySelector(".qty");
-var teller = aantal.innerHTML;
+var url = "/";
 
 primus = Primus.connect(url, {
     reconnect: {
@@ -9,7 +8,11 @@ primus = Primus.connect(url, {
     }
 });
 
-document.querySelector(".controls__min").addEventListener("click", function(e) {
+primus.on('data', function message(data) {
+    console.log('received message from server', data);
+});
+
+/*document.querySelector(".controls__min").addEventListener("click", function(e) {
     var min = document.querySelector(".min");
 
     primus.write(minbutton);
@@ -46,4 +49,4 @@ plus.addEventListener("click", function(e){
 
 primus.on('data', function message(data) {
     Min(data);
-});
+});*/
