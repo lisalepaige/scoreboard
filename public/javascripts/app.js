@@ -8,23 +8,122 @@ primus = Primus.connect(url, {
     }
 });
 
-primus.on('data', function message(data) {
-    console.log('received message from server', data);
-});
-
-/*document.querySelector(".controls__min").addEventListener("click", function(e) {
-    var min = document.querySelector(".min");
+document.querySelector(".minscore__team1").addEventListener("click", function(e) {
+    var minbutton = document.querySelector(".minscore__team1");
 
     primus.write(minbutton);
-    console.log("min clicked");
+    console.log("min score 1 clicked");
+
+    e.preventDefault();
     
 });
 
-function Min(data)
-{
-    var min = document.querySelector(".min");
+document.querySelector(".minscore__team2").addEventListener("click", function(e) {
+    var minbutton = document.querySelector(".minscore__team2");
 
-    if(teller <= 1)
+    primus.write(minbutton);
+    console.log("min score 2 clicked");
+
+    e.preventDefault();
+});
+
+document.querySelector(".plusscore__team1").addEventListener("click", function(e) {
+    var plusbutton = document.querySelector(".plusscore__team1");
+
+    primus.write(plusbutton);
+    console.log("plus score 1 clicked");
+
+    e.preventDefault();
+});
+
+document.querySelector(".plusscore__team2").addEventListener("click", function(e) {
+    var plusbutton = document.querySelector(".plusscore__team2");
+
+    primus.write(plusbutton);
+    console.log("plus score 2 clicked");
+
+    e.preventDefault();
+});
+
+document.querySelector(".minshots__team1").addEventListener("click", function(e) {
+    var plusbutton = document.querySelector(".minshots__team1");
+
+    primus.write(plusbutton);
+    console.log("min shots 1 clicked");
+
+    e.preventDefault();
+});
+
+document.querySelector(".minshots__team2").addEventListener("click", function(e) {
+    var plusbutton = document.querySelector(".minshots__team2");
+
+    primus.write(plusbutton);
+    console.log("min shots 2 clicked");
+
+    e.preventDefault();
+});
+
+document.querySelector(".plusshots__team1").addEventListener("click", function(e) {
+    var plusbutton = document.querySelector(".plusshots__team1");
+
+    primus.write(plusbutton);
+    console.log("plus shots 1 clicked");
+
+    e.preventDefault();
+});
+
+document.querySelector(".plusshots__team2").addEventListener("click", function(e) {
+    var plusbutton = document.querySelector(".plusshots__team2");
+
+    primus.write(plusbutton);
+    console.log("plus shots 2 clicked");
+
+    e.preventDefault();
+});
+
+document.querySelector(".minfouls__team1").addEventListener("click", function(e) {
+    var plusbutton = document.querySelector(".minfouls__team1");
+
+    primus.write(plusbutton);
+    console.log("min fouls 1 clicked");
+
+    e.preventDefault();
+});
+
+document.querySelector(".minfouls__team2").addEventListener("click", function(e) {
+    var plusbutton = document.querySelector(".minfouls__team2");
+
+    primus.write(plusbutton);
+    console.log("min fouls 2 clicked");
+
+    e.preventDefault();
+});
+
+document.querySelector(".plusfouls__team1").addEventListener("click", function(e) {
+    var plusbutton = document.querySelector(".plusfouls__team1");
+
+    primus.write(plusbutton);
+    console.log("plus fouls 1 clicked");
+
+    e.preventDefault();
+});
+
+document.querySelector(".plusfouls__team2").addEventListener("click", function(e) {
+    var plusbutton = document.querySelector(".plusfouls__team2");
+
+    primus.write(plusbutton);
+    console.log("plus fouls 2 clicked");
+
+    e.preventDefault();
+});
+
+
+
+
+
+/*function Min(data)
+{
+       if(teller <= 1)
     {
         teller = 1;
         aantal.innerHTML = teller;
@@ -50,3 +149,8 @@ plus.addEventListener("click", function(e){
 primus.on('data', function message(data) {
     Min(data);
 });*/
+
+
+primus.on('data', function message(data) {
+    //console.log('received message from server', data);
+});
