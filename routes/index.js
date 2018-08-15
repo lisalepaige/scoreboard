@@ -13,9 +13,9 @@ router.get('/scoreboard', function (req, res) {
     });
 });
 
-router.get('/controle', function (req, res) {  
-    res.render('./controle', {
-        title: 'Controle Panel'
+router.get('/admin', function (req, res) {  
+    res.render('./admin', {
+        title: 'Control Panel'
     });
 })
 
