@@ -28,7 +28,11 @@ function MinScore1()
     var newCount = parseInt(count)-1;
     aantal.innerHTML = newCount;
 
+    var aantalhome = document.querySelector(".score__team1");
+    aantalhome.innerHTML = newCount;
+
     console.log(aantal.innerHTML);
+    console.log(aantalhome.innerHTML);
 }
 
 document.querySelector(".minscore__team2").addEventListener("click", function(e) {

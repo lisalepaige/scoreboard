@@ -2,14 +2,14 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/', function (req, res) {
-    res.render('./home', {
-        title: 'Home'
+    res.render('./scoreboard', {
+        title: 'Scoreboard'
     });
 });
 
-router.get('/home', function (req, res) {
-    res.render('./home', {
-        title: 'Home'
+router.get('/scoreboard', function (req, res) {
+    res.render('./scoreboard', {
+        title: 'Scoreboard'
     });
 });
 
