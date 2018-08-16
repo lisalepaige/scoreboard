@@ -501,6 +501,8 @@ if(document.querySelector(".btn3") != null){
             type: "live-updates",
             updates: updates
         });
+
+        e.preventDefault();
     
     });
 }
@@ -515,6 +517,9 @@ function LiveUpdates(updates)
     if(container != null){
         container.appendChild(block);
     }
+
+    var updates = document.querySelector(".updates__input").value;
+    var update = document.querySelector(".updates__input");
 
 }
 
