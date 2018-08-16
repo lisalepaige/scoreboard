@@ -30,17 +30,23 @@ function MinScore1()
     console.log("function minsore1");
     
     var aantal = document.querySelector(".aantalscore__team1");
-    var count = aantal.innerHTML;
-    var newCount = parseInt(count)-1;
-    aantal.innerHTML = newCount;
+    if(aantal != null){
+        var count = aantal.innerHTML;
+        var newCount = parseInt(count)-1;
+        aantal.innerHTML = newCount;
+
+        console.log(aantal.innerHTML);
+    }
 
     var aantalhome = document.querySelector(".score__team1");
     if(aantalhome != null){
+        var count = aantalhome.innerHTML;
+        var newCount = parseInt(count)-1;
         aantalhome.innerHTML = newCount;
-    }
 
-    console.log(aantal.innerHTML);
-    //console.log(aantalhome.innerHTML);
+        console.log(aantalhome.innerHTML);
+        
+    }
 }
 
 if(document.querySelector(".minscore__team2") != null){
@@ -61,16 +67,20 @@ function MinScore2()
     console.log("function minsore2");
     
     var aantal = document.querySelector(".aantalscore__team2");
-    var count = aantal.innerHTML;
-    var newCount = parseInt(count)-1;
-    aantal.innerHTML = newCount;
+    if(aantal != null){
+        var count = aantal.innerHTML;
+        var newCount = parseInt(count)-1;
+        aantal.innerHTML = newCount;
+    }
 
     var aantalhome = document.querySelector(".score__team2");
     if(aantalhome != null){
+        var count = aantalhome.innerHTML;
+        var newCount = parseInt(count)-1;
         aantalhome.innerHTML = newCount;
-    }
 
-    console.log(aantal.innerHTML);
+        console.log(aantalhome.innerHTML);
+    }
 }
 
 if(document.querySelector(".plusscore__team1") != null){
@@ -101,14 +111,13 @@ function PlusScore1() {
 
     var aantalhome = document.querySelector(".score__team1");
     if(aantalhome != null){
-        
+        var count = aantalhome.innerHTML;
+        var newCount = parseInt(count)+1;
         aantalhome.innerHTML = newCount;
 
         console.log(aantalhome.innerHTML);
+        
     }
-
-
-    
 }
 
 if(document.querySelector(".plusscore__team2") != null){
@@ -129,16 +138,23 @@ function PlusScore2() {
     console.log("function plussore2");
     
     var aantal = document.querySelector(".aantalscore__team2");
-    var count = aantal.innerHTML;
-    var newCount = parseInt(count)+1;
-    aantal.innerHTML = newCount;
+    if(aantal != null){
+        var count = aantal.innerHTML;
+        var newCount = parseInt(count)+1;
+        aantal.innerHTML = newCount;
+
+        console.log(aantal.innerHTML);
+    }
 
     var aantalhome = document.querySelector(".score__team2");
     if(aantalhome != null){
+        var count = aantalhome.innerHTML;
+        var newCount = parseInt(count)+1;
         aantalhome.innerHTML = newCount;
-    }
 
-    console.log(aantal.innerHTML);
+        console.log(aantalhome.innerHTML);
+        
+    }
 }
 
 if(document.querySelector(".minshots__team1") != null){
@@ -159,11 +175,22 @@ function MinShots1()
     console.log("function minshots1");
     
     var aantal = document.querySelector(".aantalshots__team1");
+    if(aantal != null){
     var count = aantal.innerHTML;
     var newCount = parseInt(count)-1;
     aantal.innerHTML = newCount;
 
     console.log(aantal.innerHTML);
+    }
+
+    var aantalhome = document.querySelector(".shots__team1");
+    if(aantalhome != null){
+        var count = aantalhome.innerHTML;
+        var newCount = parseInt(count)-1;
+        aantalhome.innerHTML = newCount;
+
+        console.log(aantalhome.innerHTML);
+    }
 }
 
 if(document.querySelector(".minshots__team2") != null){
@@ -184,11 +211,22 @@ function MinShots2()
     console.log("function minshots 2");
     
     var aantal = document.querySelector(".aantalshots__team2");
+    if(aantal != null){
     var count = aantal.innerHTML;
     var newCount = parseInt(count)-1;
     aantal.innerHTML = newCount;
 
     console.log(aantal.innerHTML);
+    }
+
+    var aantalhome = document.querySelector(".shots__team2");
+    if(aantalhome != null){
+        var count = aantalhome.innerHTML;
+        var newCount = parseInt(count)-1;
+        aantalhome.innerHTML = newCount;
+
+        console.log(aantalhome.innerHTML);
+    }
 }
 
 if(document.querySelector(".plusshots__team1") != null){
@@ -209,11 +247,23 @@ function PlusShots1() {
     console.log("function plushots1");
     
     var aantal = document.querySelector(".aantalshots__team1");
-    var count = aantal.innerHTML;
-    var newCount = parseInt(count)+1;
-    aantal.innerHTML = newCount;
+    if(aantal != null){
+        var count = aantal.innerHTML;
+        var newCount = parseInt(count)+1;
+        aantal.innerHTML = newCount;
 
-    console.log(aantal.innerHTML);
+        console.log(aantal.innerHTML);
+    }
+
+    var aantalhome = document.querySelector(".shots__team1");
+    if(aantalhome != null){
+        var count = aantalhome.innerHTML;
+        var newCount = parseInt(count)+1;
+        aantalhome.innerHTML = newCount;
+
+        console.log(aantalhome.innerHTML);
+        
+    }
 }
 
 if(document.querySelector(".plusshots__team2") != null){
@@ -234,11 +284,23 @@ function PlusShots2() {
     console.log("function plushots2");
     
     var aantal = document.querySelector(".aantalshots__team2");
-    var count = aantal.innerHTML;
-    var newCount = parseInt(count)+1;
-    aantal.innerHTML = newCount;
+    if(aantal != null){
+        var count = aantal.innerHTML;
+        var newCount = parseInt(count)+1;
+        aantal.innerHTML = newCount;
 
-    console.log(aantal.innerHTML);
+        console.log(aantal.innerHTML);
+    }
+
+    var aantalhome = document.querySelector(".shots__team2");
+    if(aantalhome != null){
+        var count = aantalhome.innerHTML;
+        var newCount = parseInt(count)+1;
+        aantalhome.innerHTML = newCount;
+
+        console.log(aantalhome.innerHTML);
+        
+    }
 }
 
 if(document.querySelector(".minfouls__team1") != null){
@@ -259,11 +321,22 @@ function MinFouls1()
     console.log("function minfouls1");
     
     var aantal = document.querySelector(".aantalfouls__team1");
+    if(aantal != null){
     var count = aantal.innerHTML;
     var newCount = parseInt(count)-1;
     aantal.innerHTML = newCount;
 
     console.log(aantal.innerHTML);
+    }
+
+    var aantalhome = document.querySelector(".fouls__team1");
+    if(aantalhome != null){
+        var count = aantalhome.innerHTML;
+        var newCount = parseInt(count)-1;
+        aantalhome.innerHTML = newCount;
+
+        console.log(aantalhome.innerHTML);
+    }
 }
 
 if(document.querySelector(".minfouls__team2") != null){
@@ -284,11 +357,22 @@ function MinFouls2()
     console.log("function minfouls2");
     
     var aantal = document.querySelector(".aantalfouls__team2");
+    if(aantal != null){
     var count = aantal.innerHTML;
     var newCount = parseInt(count)-1;
     aantal.innerHTML = newCount;
 
     console.log(aantal.innerHTML);
+    }
+
+    var aantalhome = document.querySelector(".fouls__team2");
+    if(aantalhome != null){
+        var count = aantalhome.innerHTML;
+        var newCount = parseInt(count)-1;
+        aantalhome.innerHTML = newCount;
+
+        console.log(aantalhome.innerHTML);
+    }
 }
 
 if(document.querySelector(".plusfouls__team1") != null){
@@ -309,11 +393,23 @@ function PlusFouls1() {
     console.log("function plufouls1");
     
     var aantal = document.querySelector(".aantalfouls__team1");
-    var count = aantal.innerHTML;
-    var newCount = parseInt(count)+1;
-    aantal.innerHTML = newCount;
+    if(aantal != null){
+        var count = aantal.innerHTML;
+        var newCount = parseInt(count)+1;
+        aantal.innerHTML = newCount;
 
-    console.log(aantal.innerHTML);
+        console.log(aantal.innerHTML);
+    }
+
+    var aantalhome = document.querySelector(".fouls__team1");
+    if(aantalhome != null){
+        var count = aantalhome.innerHTML;
+        var newCount = parseInt(count)+1;
+        aantalhome.innerHTML = newCount;
+
+        console.log(aantalhome.innerHTML);
+        
+    }
 }
 
 if(document.querySelector(".plusfouls__team2") != null){
@@ -334,11 +430,23 @@ function PlusFouls2() {
     console.log("function plufouls2");
     
     var aantal = document.querySelector(".aantalfouls__team2");
-    var count = aantal.innerHTML;
-    var newCount = parseInt(count)+1;
-    aantal.innerHTML = newCount;
+    if(aantal != null){
+        var count = aantal.innerHTML;
+        var newCount = parseInt(count)+1;
+        aantal.innerHTML = newCount;
 
-    console.log(aantal.innerHTML);
+        console.log(aantal.innerHTML);
+    }
+
+    var aantalhome = document.querySelector(".fouls__team2");
+    if(aantalhome != null){
+        var count = aantalhome.innerHTML;
+        var newCount = parseInt(count)+1;
+        aantalhome.innerHTML = newCount;
+
+        console.log(aantalhome.innerHTML);
+        
+    }
 }
 
 if(document.querySelector(".btn1") != null){
@@ -379,11 +487,13 @@ function TeamName2(team2)
 {
     var teamname = document.querySelector(".title2");
     if(teamname != null){
-    teamname.innerHTML = team2;
+        teamname.innerHTML = team2;
 
-    console.log(team2);
+        console.log(team2);
     }
 }
+
+
 
 primus.on('data', function message(data) {
 
