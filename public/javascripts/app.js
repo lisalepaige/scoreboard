@@ -8,16 +8,22 @@ primus = Primus.connect(url, {
     }
 });
 
-document.querySelector(".minscore__team1").addEventListener("click", function(e) {
-    var minbutton = document.querySelector(".minscore__team1");
+document.addEventListener('DOMContentLoaded', function () {
 
-    primus.write({
-        type: "minscore1",
+
+    if(document.querySelector(".minscore__team1") != null){
+    document.querySelector(".minscore__team1").addEventListener("click", function(e) {
+        var minbutton = document.querySelector(".minscore__team1");
+
+        primus.write({
+            type: "minscore1",
+        });
+
+        console.log("min score 1 clicked");
+        e.preventDefault();
     });
+    };
 
-    console.log("min score 1 clicked");
-    e.preventDefault();
-});
 
 function MinScore1()
 {
@@ -29,12 +35,15 @@ function MinScore1()
     aantal.innerHTML = newCount;
 
     var aantalhome = document.querySelector(".score__team1");
-    aantalhome.innerHTML = newCount;
+    if(aantalhome != null){
+        aantalhome.innerHTML = newCount;
+    }
 
     console.log(aantal.innerHTML);
-    console.log(aantalhome.innerHTML);
+    //console.log(aantalhome.innerHTML);
 }
 
+if(document.querySelector(".minscore__team2") != null){
 document.querySelector(".minscore__team2").addEventListener("click", function(e) {
     var minbutton = document.querySelector(".minscore__team2");
 
@@ -45,6 +54,7 @@ document.querySelector(".minscore__team2").addEventListener("click", function(e)
     console.log("min score 2 clicked");
     e.preventDefault();
 });
+}
 
 function MinScore2()
 {
@@ -55,9 +65,15 @@ function MinScore2()
     var newCount = parseInt(count)-1;
     aantal.innerHTML = newCount;
 
+    var aantalhome = document.querySelector(".score__team2");
+    if(aantalhome != null){
+        aantalhome.innerHTML = newCount;
+    }
+
     console.log(aantal.innerHTML);
 }
 
+if(document.querySelector(".plusscore__team1") != null){
 document.querySelector(".plusscore__team1").addEventListener("click", function(e) {
     var plusbutton = document.querySelector(".plusscore__team1");
 
@@ -68,19 +84,34 @@ document.querySelector(".plusscore__team1").addEventListener("click", function(e
     console.log("plus score 1 clicked");    
     e.preventDefault();
 });
+}
 
 function PlusScore1() {
 
     console.log("function plussore1");
     
     var aantal = document.querySelector(".aantalscore__team1");
-    var count = aantal.innerHTML;
-    var newCount = parseInt(count)+1;
-    aantal.innerHTML = newCount;
+    if(aantal != null){
+        var count = aantal.innerHTML;
+        var newCount = parseInt(count)+1;
+        aantal.innerHTML = newCount;
 
-    console.log(aantal.innerHTML);
+        console.log(aantal.innerHTML);
+    }
+
+    var aantalhome = document.querySelector(".score__team1");
+    if(aantalhome != null){
+        
+        aantalhome.innerHTML = newCount;
+
+        console.log(aantalhome.innerHTML);
+    }
+
+
+    
 }
 
+if(document.querySelector(".plusscore__team2") != null){
 document.querySelector(".plusscore__team2").addEventListener("click", function(e) {
     var plusbutton = document.querySelector(".plusscore__team2");
 
@@ -91,6 +122,7 @@ document.querySelector(".plusscore__team2").addEventListener("click", function(e
     console.log("plus score 2 clicked");    
     e.preventDefault();
 });
+}
 
 function PlusScore2() {
 
@@ -101,9 +133,15 @@ function PlusScore2() {
     var newCount = parseInt(count)+1;
     aantal.innerHTML = newCount;
 
+    var aantalhome = document.querySelector(".score__team2");
+    if(aantalhome != null){
+        aantalhome.innerHTML = newCount;
+    }
+
     console.log(aantal.innerHTML);
 }
 
+if(document.querySelector(".minshots__team1") != null){
 document.querySelector(".minshots__team1").addEventListener("click", function(e) {
     var plusbutton = document.querySelector(".minshots__team1");
 
@@ -114,6 +152,7 @@ document.querySelector(".minshots__team1").addEventListener("click", function(e)
     console.log("min shots 1 clicked");
     e.preventDefault();
 });
+}
 
 function MinShots1()
 {
@@ -127,6 +166,7 @@ function MinShots1()
     console.log(aantal.innerHTML);
 }
 
+if(document.querySelector(".minshots__team2") != null){
 document.querySelector(".minshots__team2").addEventListener("click", function(e) {
     var plusbutton = document.querySelector(".minshots__team2");
 
@@ -137,6 +177,7 @@ document.querySelector(".minshots__team2").addEventListener("click", function(e)
     console.log("min shots 2 clicked");
     e.preventDefault();
 });
+}
 
 function MinShots2()
 {
@@ -150,6 +191,7 @@ function MinShots2()
     console.log(aantal.innerHTML);
 }
 
+if(document.querySelector(".plusshots__team1") != null){
 document.querySelector(".plusshots__team1").addEventListener("click", function(e) {
     var plusbutton = document.querySelector(".plusshots__team1");
 
@@ -160,6 +202,7 @@ document.querySelector(".plusshots__team1").addEventListener("click", function(e
     console.log("plus shots 1 clicked");    
     e.preventDefault();
 });
+}
 
 function PlusShots1() {
 
@@ -173,6 +216,7 @@ function PlusShots1() {
     console.log(aantal.innerHTML);
 }
 
+if(document.querySelector(".plusshots__team2") != null){
 document.querySelector(".plusshots__team2").addEventListener("click", function(e) {
     var plusbutton = document.querySelector(".plusshots__team2");
 
@@ -183,6 +227,7 @@ document.querySelector(".plusshots__team2").addEventListener("click", function(e
     console.log("plus shots 2 clicked");    
     e.preventDefault();
 });
+}
 
 function PlusShots2() {
 
@@ -196,6 +241,7 @@ function PlusShots2() {
     console.log(aantal.innerHTML);
 }
 
+if(document.querySelector(".minfouls__team1") != null){
 document.querySelector(".minfouls__team1").addEventListener("click", function(e) {
     var plusbutton = document.querySelector(".minfouls__team1");
 
@@ -206,6 +252,7 @@ document.querySelector(".minfouls__team1").addEventListener("click", function(e)
     console.log("min fouls 1 clicked");
     e.preventDefault();
 });
+}
 
 function MinFouls1()
 {
@@ -219,6 +266,7 @@ function MinFouls1()
     console.log(aantal.innerHTML);
 }
 
+if(document.querySelector(".minfouls__team2") != null){
 document.querySelector(".minfouls__team2").addEventListener("click", function(e) {
     var plusbutton = document.querySelector(".minfouls__team2");
 
@@ -229,6 +277,7 @@ document.querySelector(".minfouls__team2").addEventListener("click", function(e)
     console.log("min fouls 2 clicked");
     e.preventDefault();
 });
+}
 
 function MinFouls2()
 {
@@ -242,6 +291,7 @@ function MinFouls2()
     console.log(aantal.innerHTML);
 }
 
+if(document.querySelector(".plusfouls__team1") != null){
 document.querySelector(".plusfouls__team1").addEventListener("click", function(e) {
     var plusbutton = document.querySelector(".plusfouls__team1");
 
@@ -252,6 +302,7 @@ document.querySelector(".plusfouls__team1").addEventListener("click", function(e
     console.log("plus fouls 1 clicked");    
     e.preventDefault();
 });
+}
 
 function PlusFouls1() {
 
@@ -265,6 +316,7 @@ function PlusFouls1() {
     console.log(aantal.innerHTML);
 }
 
+if(document.querySelector(".plusfouls__team2") != null){
 document.querySelector(".plusfouls__team2").addEventListener("click", function(e) {
     var plusbutton = document.querySelector(".plusfouls__team2");
 
@@ -275,6 +327,7 @@ document.querySelector(".plusfouls__team2").addEventListener("click", function(e
     console.log("plus fouls 2 clicked");    
     e.preventDefault();
 });
+}
 
 function PlusFouls2() {
 
@@ -288,7 +341,8 @@ function PlusFouls2() {
     console.log(aantal.innerHTML);
 }
 
-document.querySelector(".sbmtbutton").addEventListener("click", function(e) {
+if(document.querySelector(".btn1") != null){
+document.querySelector(".btn1").addEventListener("click", function(e) {
     var team1 = document.querySelector(".team1__input").value;
 
     primus.write({
@@ -297,16 +351,38 @@ document.querySelector(".sbmtbutton").addEventListener("click", function(e) {
     });
 
 });
+}
 
 function TeamName1(team1)
 {
-    console.log(team1);
-
     var teamname = document.querySelector(".title1");
-    var name = teamname.innerHTML;
-    name = team1;
+    if(teamname != null){
+    teamname.innerHTML = team1;
 
-    console.log(name);
+    console.log(team1);
+    }
+}
+
+if(document.querySelector(".btn2") != null){
+document.querySelector(".btn2").addEventListener("click", function(e) {
+    var team2 = document.querySelector(".team2__input").value;
+
+    primus.write({
+        type: "team2",
+        name: team2
+    });
+
+});
+}
+
+function TeamName2(team2)
+{
+    var teamname = document.querySelector(".title2");
+    if(teamname != null){
+    teamname.innerHTML = team2;
+
+    console.log(team2);
+    }
 }
 
 primus.on('data', function message(data) {
@@ -314,7 +390,10 @@ primus.on('data', function message(data) {
     if (data.type == "team1") {
         TeamName1(data.name);
         
-    }else if (data.type == "minscore1"){
+    } else if (data.type == "team2") {
+        TeamName2(data.name);
+    }
+    else if (data.type == "minscore1"){
         MinScore1();
     } 
     else if (data.type == "minscore2"){
@@ -350,4 +429,6 @@ primus.on('data', function message(data) {
     else if (data.type == "plusfouls2") {
         PlusFouls2();
     } 
+});
+
 });
