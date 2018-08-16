@@ -469,6 +469,11 @@ function TeamName1(team1)
 
     console.log(team1);
     }
+
+    var teamInput = document.querySelector(".team1__input");
+    if(teamInput != null) {
+        teamInput.value = "";
+    }
 }
 
 if(document.querySelector(".btn2") != null){
@@ -490,6 +495,11 @@ function TeamName2(team2)
         teamname.innerHTML = team2;
 
         console.log(team2);
+    }
+
+    var teamInput = document.querySelector(".team2__input");
+    if(teamInput != null) {
+        teamInput.value = "";
     }
 }
 
@@ -518,9 +528,11 @@ function LiveUpdates(updates)
         container.appendChild(block);
     }
 
-    var updates = document.querySelector(".updates__input").value;
-    var update = document.querySelector(".updates__input");
 
+    var updates = document.querySelector(".updates__input");
+    if(updates != null) {
+        updates.value = "";
+    }
 }
 
 
