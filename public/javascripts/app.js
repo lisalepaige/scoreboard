@@ -493,6 +493,30 @@ function TeamName2(team2)
     }
 }
 
+if(document.querySelector(".btn3") != null){
+    document.querySelector(".btn3").addEventListener("click", function(e) {
+        var updates = document.querySelector(".updates__input").value;
+
+        primus.write({
+            type: "live-updates",
+            updates: updates
+        });
+    
+    });
+}
+
+function LiveUpdates(updates)
+{
+    var container = document.querySelector(".updates");
+    var block = document.createElement("p");
+    block.classList.add("updates__p");
+    block.innerHTML = updates;
+
+    if(container != null){
+        container.appendChild(block);
+    }
+
+}
 
 
 primus.on('data', function message(data) {
@@ -539,6 +563,10 @@ primus.on('data', function message(data) {
     else if (data.type == "plusfouls2") {
         PlusFouls2();
     } 
+    else if (data.type == "live-updates")
+    {
+        LiveUpdates(data.updates);
+    }
 });
 
 });
