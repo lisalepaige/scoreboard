@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/lisalepaige/scoreboard#readme",
   "dependencies": {
+    "assert": "^1.4.1",
     "body-parser": "^1.18.3",
     "create-error": "^0.3.1",
     "express": "^4.16.3",
