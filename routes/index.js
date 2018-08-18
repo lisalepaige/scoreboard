@@ -24,9 +24,22 @@ router.get('/scoreboard', function (req, res) {
         // get database
         var dbo = db.db("scoreboard");
         // get last item back 
-        var cursor = dbo.collection("team1").find()  
-        console.log(cursor);   
-        cursor.forEach(function (doc, err) {
+        var coll1 = dbo.collection("team1").find();  
+        var coll2 = dbo.collection("team2").find();
+        var coll3 = dbo.collection("updates").find();  
+        coll1.forEach(function (doc, err) {
+            assert.equal(null, err);
+            console.log('--- Get items ---');
+            console.log(doc);
+            item = doc;
+          },
+          coll2.forEach(function (doc, err) {
+            assert.equal(null, err);
+            console.log('--- Get items ---');
+            console.log(doc);
+            item = doc;
+          }, 
+          coll3.forEach(function (doc, err) {
             assert.equal(null, err);
             console.log('--- Get items ---');
             console.log(doc);
@@ -38,7 +51,7 @@ router.get('/scoreboard', function (req, res) {
             res.render('./scoreboard', {
                 title: 'Scoreboard'
             });
-        });
+        })));
     });
 });
 
