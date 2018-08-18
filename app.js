@@ -13,10 +13,13 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 app.use(express.static(path.join(__dirname, 'public')));
 
+var MongoClient = require('mongodb').MongoClient;
+var local = "mongodb://localhost:27017";
 
 //connection
-var uri = "mongodb://adminlepaige:Webtech3Admin@ds123500.mlab.com:23500/scoreboard"
-mongoose.connect(uri);
+var uri = "mongodb://adminlepaige:Webtech3Admin@ds123500.mlab.com:23500/scoreboard";
+mongoose.connect(uri, { useNewUrlParser: true });
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
