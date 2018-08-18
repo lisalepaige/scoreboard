@@ -10,6 +10,6 @@ const Team2Schema = new Schema({
     collection: 'team2'
   }); 
 
-const Team2 = mongoose.model('team1', Team2Schema);
+const Team2 = mongoose.model('team2', Team2Schema);
 
 module.exports = Team2;

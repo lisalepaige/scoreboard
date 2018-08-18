@@ -68,7 +68,8 @@ body {
   display: grid;
   grid-template-rows: 30% 30% 30%;
   justify-items: center;
-  grid-gap: 10px; }
+  grid-gap: 10px;
+  padding-bottom: 50px; }
 
 .team, .info__shots, .info__fouls, .updates__p {
   display: flex;
@@ -82,3 +83,6 @@ body {
 
 .info__fouls {
   margin-left: 55px; }
+
+.updates__flexbox {
+  padding-bottom: 50px; }

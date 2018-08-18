@@ -10,7 +10,7 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('./public/css'));
 });
 
-gulp.task('sass', function () {
+gulp.task('sass:watch', function () {
     gulp.watch('./public/scss/**/*.scss', ['sass']);
 });
 
