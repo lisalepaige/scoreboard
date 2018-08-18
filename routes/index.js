@@ -3,6 +3,8 @@ var router = express.Router();
 var bodyParser = require('body-parser');
 var MongoClient = require('mongodb').MongoClient;
 
+var online = "mongodb://adminlepaige:Webtech3Admin@ds123500.mlab.com:23500/scoreboard"
+
 // connect to mongo db
 mongo.connect(online, function (err, db) {
     assert.equal(null, err);
