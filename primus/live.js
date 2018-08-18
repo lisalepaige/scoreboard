@@ -1,9 +1,3 @@
-const mongoose = require('mongoose');
-
-const Team1 = require('../models/team1model');
-const Team2 = require('../models/team2model');
-const Update = require('../models/updatesmodel');
-
 exports.go = function(server) {
     
     const Primus = require('primus');
