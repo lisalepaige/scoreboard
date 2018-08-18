@@ -1,8 +1,15 @@
 var express = require('express');
 var router = express.Router();
 var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
+var MongoClient = require('mongodb').MongoClient;
 
-router.use(bodyParser.urlencoded({ extended: false }));
+var Schema = mongoose.Schema;
+
+//require models
+const Team1 = require('../models/team1model');
+const Team2 = require('../models/team2model');
+const Update = require('../models/updatesmodel');
 
 router.use(bodyParser.json());
 
