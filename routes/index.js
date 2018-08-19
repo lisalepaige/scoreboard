@@ -30,26 +30,29 @@ router.get('/scoreboard', function (req, res) {
         coll1.forEach(function (doc, err) {
             assert.equal(null, err);
             //console.log('--- Get items ---');
-            console.log(doc);
+            //console.log(doc);
             item = doc;
           },
           coll2.forEach(function (doc, err) {
             assert.equal(null, err);
             //console.log('--- Get items ---');
-            console.log(doc);
+            //console.log(doc);
             item = doc;
           }, 
           coll3.forEach(function (doc, err) {
             assert.equal(null, err);
             //console.log('--- Get items ---');
-            console.log(doc);
+            //console.log(doc);
             item = doc;
           }, function () {
             // callback -> after: close db, render get page with item
             db.close();
     
             res.render('./scoreboard', {
-                title: 'Scoreboard'
+                title: 'Scoreboard',
+                team1: items1.team1,
+                score1: items1.score1,
+                shots1: items1.shots1
             });
         })));
     });
@@ -70,19 +73,19 @@ router.get('/admin', function (req, res) {
         coll1.forEach(function (doc, err) {
             assert.equal(null, err);
             //console.log('--- Get items ---');
-            console.log(doc);
+            //console.log(doc);
             item = doc;
           },
           coll2.forEach(function (doc, err) {
             assert.equal(null, err);
             //console.log('--- Get items ---');
-            console.log(doc);
+            //console.log(doc);
             item = doc;
           }, 
           coll3.forEach(function (doc, err) {
             assert.equal(null, err);
             //console.log('--- Get items ---');
-            console.log(doc);
+            //console.log(doc);
             item = doc;
           }, function () {
             // callback -> after: close db, render get page with item
