@@ -5,7 +5,7 @@ var MongoClient = require('mongodb').MongoClient;
 var mongo = require('mongodb');
 var assert = require('assert');
 
-var online = "mongodb://adminlepaige:Webtech3Admin@ds123500.mlab.com:23500/scoreboard"
+var online = "mongodb://adminlepaige:Webtech3Admin@ds123500.mlab.com:23500/scoreboard";
 
 router.use(bodyParser.json());
 
