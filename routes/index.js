@@ -7,8 +7,6 @@ var assert = require('assert');
 
 var online = "mongodb://adminlepaige:Webtech3Admin@ds123500.mlab.com:23500/scoreboard";
 
-router.use(bodyParser.json());
-
 router.get('/', function (req, res) {
     var item;
     //connect
@@ -120,17 +118,18 @@ router.get('/admin', function (req, res) {
     });   
 });
 
-router.post('/admin', function (req, res, next) {
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
+
+router.post('/admin', urlencodedParser, function (req, res, next) {
     var items1 = {
         team1: req.body.team1,
-        score1: "5",
+        score1: req.body.score1,
         shots1: req.body.shots1,
         fouls1: req.body.fouls1,
         team2: req.body.team2,
-    };
+        updates: req.body.updates
+    };    
 
-    console.log(items1);
-    
     // connect to mongo db
     mongo.connect(online, function (err, db) {
     assert.equal(null, err);
@@ -139,8 +138,7 @@ router.post('/admin', function (req, res, next) {
       // callback (if no errors)
       assert.equal(null, err);
       console.log('--- Item inserted ---');
-      console.log(items1.score1);
-      console.log(items1.team2);
+      
       db.close();
     });
   });

@@ -1,17 +1,21 @@
 const createError = require('http-errors');
 const express = require('express');
-const BodyParser = require('body-parser');
+const bodyParser = require('body-parser');
 const path = require('path');
 
 const app = express();
 
-app.use(BodyParser.json());
-app.use("/", require('./routes/index'));
+
+app.use(bodyParser.urlencoded({ extended: false }));
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
-app.use(express.static(path.join(__dirname, 'public')));
 
+//app.use(express.bodyParser());
+
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.json());
+app.use("/", require('./routes/index'));
 var MongoClient = require('mongodb').MongoClient;
 var local = "mongodb://localhost:27017";
 

@@ -1,57 +1,56 @@
 extends layout
 
 block content
-
-  h1 Control Panel
-  h3 Teams
-  form(action="" method="post")
-    .teams__flexbox
-      label.teams__label(for='team1') Team 1
-      input.teams__input.team1__input(type='text', name='team1')
-      input.sbmtbutton.btn1(type='submit', value='Submit')
-    .teams__flexbox
-      label.teams__label(for='team2') Team 2
-      input.teams__input.team2__input(type='text', name='team2')
-      input.sbmtbutton.btn2(type='submit', value='Submit')
-  .space  
-  h3 Score
-  form(action="" method="post")
+  body
+    h1 Control Panel
+    h3 Teams
+    form(action="" method="post" class="teamname")
+      .teams__flexbox
+        label.teams__label(for='team1') Team 1
+        input.teams__input.team1__input(type='text', name='team1')
+        input.sbmtbutton.btn1(type='submit', value='Submit')
+      .teams__flexbox
+        label.teams__label(for='team2') Team 2
+        input.teams__input.team2__input(type='text', name='team2')
+        input.sbmtbutton.btn2(type='submit', value='Submit')
+    .space  
+    h3 Score
     .controls
       h4.controls__team(for='score1') Team 1
-      input.controls__min.minscore__team1(type='submit', value="-")
+      a.controls__min.minscore__team1(href='#') -
       p.controls__aantal.aantalscore__team1= score1
-      input.controls__plus.plusscore__team1(type='submit', value="+")
+      a.controls__plus.plusscore__team1(href='#') +
     .controls
       h4.controls__team Team 2
       a.controls__min.minscore__team2(href='#') -
       p.controls__aantal.aantalscore__team2= score2
       a.controls__plus.plusscore__team2(href='#') +
-  .space  
-  h3 Total shots
-  .controls
-    h4.controls__team Team 1
-    a.controls__min.minshots__team1(href='#') -
-    p.controls__aantal.aantalshots__team1= shots1
-    a.controls__plus.plusshots__team1(href='#') +
-  .controls
-    h4.controls__team Team 2
-    a.controls__min.minshots__team2(href='#') -
-    p.controls__aantal.aantalshots__team2= shots2
-    a.controls__plus.plusshots__team2(href='#') +
-  .space  
-  h3 Fouls
-  .controls
-    h4.controls__team Team 1
-    a.controls__min.minfouls__team1(href='#') -
-    p.controls__aantal.aantalfouls__team1= fouls1
-    a.controls__plus.plusfouls__team1(href='#') +
-  .controls
-    h4.controls__team Team 2
-    a.controls__min.minfouls__team2(href='#') -
-    p.controls__aantal.aantalfouls__team2= fouls2
-    a.controls__plus.plusfouls__team2(href='#') +
-  .space  
-  h3 Live Updates
-  .updates__flexbox
-    input.updates__input(type='text', name='updates')
-    input.sbmtbutton.btn3(type='submit', value='Submit')
+    .space  
+    h3 Total shots
+    .controls
+      h4.controls__team Team 1
+      a.controls__min.minshots__team1(href='#') -
+      p.controls__aantal.aantalshots__team1= shots1
+      a.controls__plus.plusshots__team1(href='#') +
+    .controls
+      h4.controls__team Team 2
+      a.controls__min.minshots__team2(href='#') -
+      p.controls__aantal.aantalshots__team2= shots2
+      a.controls__plus.plusshots__team2(href='#') +
+    .space  
+    h3 Fouls
+    .controls
+      h4.controls__team Team 1
+      a.controls__min.minfouls__team1(href='#') -
+      p.controls__aantal.aantalfouls__team1= fouls1
+      a.controls__plus.plusfouls__team1(href='#') +
+    .controls
+      h4.controls__team Team 2
+      a.controls__min.minfouls__team2(href='#') -
+      p.controls__aantal.aantalfouls__team2= fouls2
+      a.controls__plus.plusfouls__team2(href='#') +
+    .space  
+    h3 Live Updates
+    .updates__flexbox
+      input.updates__input(type='text', name='updates')
+      input.sbmtbutton.btn3(type='submit', value='Submit')
