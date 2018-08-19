@@ -16,7 +16,8 @@ router.get('/', function (req, res) {
 });
 
 router.get('/scoreboard', function (req, res) {
-    var item;
+    var item; //1
+    var item2; // 2de collectie
     //connect
     mongo.connect(online, function (err, db) {
         console.log("connected");
@@ -31,30 +32,37 @@ router.get('/scoreboard', function (req, res) {
             assert.equal(null, err);
             //console.log('--- Get items ---');
             console.log('start' + doc.score1);
-            item = doc.score1;
-          },
-          coll2.forEach(function (doc, err) {
+            item = doc;
+            //console.log(item); 
+        },
+          /*coll2.forEach(function (doc, err) {
             assert.equal(null, err);
             //console.log('--- Get items ---');
             //console.log(doc.team2);
            // item = doc;
-          }, 
-          coll3.forEach(function (doc, err) {
+          }, */
+          /*coll3.forEach(function (doc, err) {
             assert.equal(null, err);
             //console.log('--- Get items ---');
             //console.log(doc.update);
            //item = doc;
-          }, function () {
+          },*/ function () {
             // callback -> after: close db, render get page with item
             db.close();
+
+ console.log('----' + item); 
     
             res.render('./scoreboard', {
                 title: 'Scoreboard',
-                team1: item
+                team1: item.team1,
+                score1: item.score1,
+                shots1: item.shots1,
+                fouls1: item.fouls1
                 /*score1: item.score1,
                 shots1: item.shots1*/
             });
-        })));
+
+        });
     });
 });
 
@@ -75,18 +83,6 @@ router.get('/admin', function (req, res) {
             //console.log('--- Get items ---');
             //console.log(doc);
             item = doc;
-          },
-          coll2.forEach(function (doc, err) {
-            assert.equal(null, err);
-            //console.log('--- Get items ---');
-            //console.log(doc);
-            item = doc;
-          }, 
-          coll3.forEach(function (doc, err) {
-            assert.equal(null, err);
-            //console.log('--- Get items ---');
-            //console.log(doc);
-            item = doc;
           }, function () {
             // callback -> after: close db, render get page with item
             db.close();
@@ -94,7 +90,7 @@ router.get('/admin', function (req, res) {
             res.render('./admin', {
                 title: 'Control Panel'
             });
-        })));
+        });
     });   
 });
 
