@@ -30,29 +30,29 @@ router.get('/scoreboard', function (req, res) {
         coll1.forEach(function (doc, err) {
             assert.equal(null, err);
             //console.log('--- Get items ---');
-            //console.log(doc);
-            item = doc;
+            console.log('start' + doc.score1);
+            item = doc.score1;
           },
           coll2.forEach(function (doc, err) {
             assert.equal(null, err);
             //console.log('--- Get items ---');
-            //console.log(doc);
-            item = doc;
+            //console.log(doc.team2);
+           // item = doc;
           }, 
           coll3.forEach(function (doc, err) {
             assert.equal(null, err);
             //console.log('--- Get items ---');
-            //console.log(doc);
-            item = doc;
+            //console.log(doc.update);
+           //item = doc;
           }, function () {
             // callback -> after: close db, render get page with item
             db.close();
     
             res.render('./scoreboard', {
                 title: 'Scoreboard',
-                team1: items1.team1,
-                score1: items1.score1,
-                shots1: items1.shots1
+                team1: item
+                /*score1: item.score1,
+                shots1: item.shots1*/
             });
         })));
     });
