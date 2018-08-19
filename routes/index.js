@@ -10,14 +10,59 @@ var online = "mongodb://adminlepaige:Webtech3Admin@ds123500.mlab.com:23500/score
 router.use(bodyParser.json());
 
 router.get('/', function (req, res) {
-    res.render('./scoreboard', {
-        title: 'Scoreboard'
+    var item; //1
+    //var item2; // 2de collectie
+    //connect
+    mongo.connect(online, function (err, db) {
+        console.log("connected");
+        assert.equal(null, err);
+        // get database
+        var dbo = db.db("scoreboard");
+        // get last item back 
+        var coll1 = dbo.collection("team1").find();  
+        var coll2 = dbo.collection("team2").find();
+        var coll3 = dbo.collection("updates").find();  
+        coll1.forEach(function (doc, err) {
+            assert.equal(null, err);
+            //console.log('--- Get items ---');
+            console.log('start' + doc.score1);
+            item = doc;
+            //console.log(item); 
+        },
+          /*coll2.forEach(function (doc, err) {
+            assert.equal(null, err);
+            //console.log('--- Get items ---');
+            //console.log(doc.team2);
+           // item = doc;
+          }, */
+          /*coll3.forEach(function (doc, err) {
+            assert.equal(null, err);
+            //console.log('--- Get items ---');
+            //console.log(doc.update);
+           //item = doc;
+          },*/ function () {
+            // callback -> after: close db, render get page with item
+            db.close();
+
+ console.log('----' + item); 
+    
+            res.render('./scoreboard', {
+                title: 'Scoreboard',
+                team1: item.team1,
+                score1: item.score1,
+                shots1: item.shots1,
+                fouls1: item.fouls1
+                /*score1: item.score1,
+                shots1: item.shots1*/
+            });
+
+        });
     });
 });
 
 router.get('/scoreboard', function (req, res) {
     var item; //1
-    var item2; // 2de collectie
+    //var item2; // 2de collectie
     //connect
     mongo.connect(online, function (err, db) {
         console.log("connected");
