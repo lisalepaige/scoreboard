@@ -1,9 +1,9 @@
-var express = require('express');
-var router = express.Router();
-var bodyParser = require('body-parser');
-var MongoClient = require('mongodb').MongoClient;
-var mongo = require('mongodb');
-var assert = require('assert');
+const express = require('express');
+const router = express.Router();
+const bodyParser = require('body-parser');
+const MongoClient = require('mongodb').MongoClient;
+const mongo = require('mongodb');
+const assert = require('assert');
 
 var online = "mongodb://adminlepaige:Webtech3Admin@ds123500.mlab.com:23500/scoreboard";
 
@@ -118,7 +118,7 @@ router.get('/admin', function (req, res) {
     });   
 });
 
-var urlencodedParser = bodyParser.urlencoded({ extended: false })
+/*var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 router.post('/admin', urlencodedParser, function (req, res, next) {
     var items1 = {
@@ -143,6 +143,6 @@ router.post('/admin', urlencodedParser, function (req, res, next) {
     });
   });
    res.redirect('/admin');
-});
+});*/
 
 module.exports = router;
