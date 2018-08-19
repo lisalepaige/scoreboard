@@ -4,14 +4,15 @@ block content
 
   h1 Control Panel
   h3 Teams
-  .teams__flexbox
-    label.teams__label(for='team1') Team 1
-    input.teams__input.team1__input(type='text', name='team1')
-    input.sbmtbutton.btn1(type='submit', value='Submit')
-  .teams__flexbox
-    label.teams__label(for='team2') Team 2
-    input.teams__input.team2__input(type='text', name='team2')
-    input.sbmtbutton.btn2(type='submit', value='Submit')
+  form(action="" method="post")
+    .teams__flexbox
+      label.teams__label(for='team1') Team 1
+      input.teams__input.team1__input(type='text', name='team1')
+      input.sbmtbutton.btn1(type='submit', value='Submit')
+    .teams__flexbox
+      label.teams__label(for='team2') Team 2
+      input.teams__input.team2__input(type='text', name='team2')
+      input.sbmtbutton.btn2(type='submit', value='Submit')
   .space  
   h3 Score
   .controls
