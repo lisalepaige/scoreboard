@@ -15,39 +15,40 @@ block content
       input.sbmtbutton.btn2(type='submit', value='Submit')
   .space  
   h3 Score
-  .controls
-    h4.controls__team Team 1
-    a.controls__min.minscore__team1(href='#') -
-    p.controls__aantal.aantalscore__team1 0
-    a.controls__plus.plusscore__team1(href='#') +
-  .controls
-    h4.controls__team Team 2
-    a.controls__min.minscore__team2(href='#') -
-    p.controls__aantal.aantalscore__team2 0
-    a.controls__plus.plusscore__team2(href='#') +
+  form(action="" method="post")
+    .controls
+      h4.controls__team(for='score1') Team 1
+      input.controls__min.minscore__team1(type='submit', value="-")
+      p.controls__aantal.aantalscore__team1= score1
+      input.controls__plus.plusscore__team1(type='submit', value="+")
+    .controls
+      h4.controls__team Team 2
+      a.controls__min.minscore__team2(href='#') -
+      p.controls__aantal.aantalscore__team2= score2
+      a.controls__plus.plusscore__team2(href='#') +
   .space  
   h3 Total shots
   .controls
     h4.controls__team Team 1
     a.controls__min.minshots__team1(href='#') -
-    p.controls__aantal.aantalshots__team1 0
+    p.controls__aantal.aantalshots__team1= shots1
     a.controls__plus.plusshots__team1(href='#') +
   .controls
     h4.controls__team Team 2
     a.controls__min.minshots__team2(href='#') -
-    p.controls__aantal.aantalshots__team2 0
+    p.controls__aantal.aantalshots__team2= shots2
     a.controls__plus.plusshots__team2(href='#') +
   .space  
   h3 Fouls
   .controls
     h4.controls__team Team 1
     a.controls__min.minfouls__team1(href='#') -
-    p.controls__aantal.aantalfouls__team1 0
+    p.controls__aantal.aantalfouls__team1= fouls1
     a.controls__plus.plusfouls__team1(href='#') +
   .controls
     h4.controls__team Team 2
     a.controls__min.minfouls__team2(href='#') -
-    p.controls__aantal.aantalfouls__team2 0
+    p.controls__aantal.aantalfouls__team2= fouls2
     a.controls__plus.plusfouls__team2(href='#') +
   .space  
   h3 Live Updates

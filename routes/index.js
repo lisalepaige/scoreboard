@@ -96,9 +96,8 @@ router.get('/admin', function (req, res) {
         // get database
         var dbo = db.db("scoreboard");
         // get last item back 
-        var coll1 = dbo.collection("team1").find();  
-        var coll2 = dbo.collection("team2").find();
-        var coll3 = dbo.collection("updates").find();  
+        var coll1 = dbo.collection("teams").find();  
+    
         coll1.forEach(function (doc, err) {
             assert.equal(null, err);
             //console.log('--- Get items ---');
@@ -109,7 +108,13 @@ router.get('/admin', function (req, res) {
             db.close();
     
             res.render('./admin', {
-                title: 'Control Panel'
+                title: 'Control Panel',
+                score1: item.score1,
+                shots1: item.shots1,
+                fouls1: item.fouls1,
+                score2: item.score2,
+                shots2: item.shots2,
+                fouls2: item.fouls2
             });
         });
     });   
@@ -117,21 +122,25 @@ router.get('/admin', function (req, res) {
 
 router.post('/admin', function (req, res, next) {
     var items1 = {
-        team1: req.team1,
-        score1: req.score1,
-        shots1: req.shots1,
-        fouls1: req.fouls1
+        team1: req.body.team1,
+        score1: "5",
+        shots1: req.body.shots1,
+        fouls1: req.body.fouls1,
+        team2: req.body.team2,
     };
+
+    console.log(items1);
     
     // connect to mongo db
     mongo.connect(online, function (err, db) {
     assert.equal(null, err);
     // access database, use collection to insert item 
-    db.db('scoreboard').collection('team1').insertOne(items1, function (err, result) {
+    db.db('scoreboard').collection('teams').insertOne(items1, function (err, result) {
       // callback (if no errors)
       assert.equal(null, err);
       console.log('--- Item inserted ---');
-      console.log(items1.team1);
+      console.log(items1.score1);
+      console.log(items1.team2);
       db.close();
     });
   });
