@@ -118,7 +118,7 @@ router.get('/admin', function (req, res) {
     });   
 });
 
-/*var urlencodedParser = bodyParser.urlencoded({ extended: false })
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 router.post('/admin', urlencodedParser, function (req, res, next) {
     var items1 = {
@@ -134,15 +134,15 @@ router.post('/admin', urlencodedParser, function (req, res, next) {
     mongo.connect(online, function (err, db) {
     assert.equal(null, err);
     // access database, use collection to insert item 
-    db.db('scoreboard').collection('teams').insertOne(items1, function (err, result) {
+    /*db.db('scoreboard').collection('teams').insertOne(items1, function (err, result) {
       // callback (if no errors)
       assert.equal(null, err);
       console.log('--- Item inserted ---');
       
       db.close();
-    });
+    });*/
   });
    res.redirect('/admin');
-});*/
+});
 
 module.exports = router;
