@@ -3,20 +3,20 @@ extends layout
 block content
   body
     section.team
-      h2.title1 Team 1
-      h1.score__team1 0
+      h2.title1= team1
+      h1.score__team1= score1
       h1 -
-      h1.score__team2 0
-      h2.title2 Team 2
+      h1.score__team2= score2
+      h2.title2= team2
     .space  
     section.info
       .info__shots
-        h2.info--team1.shots__team1 0
+        h2.info--team1.shots__team1= shots1
         h2 total shots
-        h2.info--team2.shots__team2 0
+        h2.info--team2.shots__team2= shots2
       .info__fouls
-        h2.info--team1.fouls__team1 0
+        h2.info--team1.fouls__team1= fouls1
         h2.fouls__h2 fouls
-        h2.info--team2.fouls__team2 0
+        h2.info--team2.fouls__team2= fouls2
     .space  
-    section.updates
+    section.updates= update
